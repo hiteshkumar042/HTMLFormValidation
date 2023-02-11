@@ -24,7 +24,8 @@
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email">
+                <input type="email" id="email">
+                <span class="email-error" for="email"></span>
             </div>
             <div>
                 <label for="url">URL Link</label>
@@ -68,8 +69,20 @@
             else{
                 texterror.textContent = "Incorrect Name ";
             }
-        }
-        );
+        });
+        //Email Validation
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.addEventListener('input',function(){
+            let emailRegex = RegExp('^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$'); 
+            if(emailRegex.test(email)){
+                emailError.textContent = " ";
+            }else{
+                emailError.textContent = "Incorrect Email";
+            }
+        });
+
+        
     </script>
 
 </body>

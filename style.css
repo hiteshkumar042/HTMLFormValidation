@@ -1,0 +1,67 @@
+h1 {
+    background-color: tomato;
+    padding: 8px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+form {
+    margin-top: 20px;
+    border: 2px solid tomato;
+    padding: 50px;
+    width:600px
+}
+
+div {
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    
+
+    
+}
+
+input,
+label {
+    line-height: 14px;
+}
+
+label {
+    text-align: left;
+    width: 150px;
+
+}
+
+input {
+
+    width: 300px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 100px;
+}
+
+button:hover {
+    background-color: tomato;
+    transition: 0.4s;
+}
+
+body {
+    border: 3px solid tomato;
+}
+.test-error{
+    text-align:right;
+    
+}
+span{
+    color: red;
+    font-style: italic;
+    padding: 0 0 0 30px;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}

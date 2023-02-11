@@ -24,7 +24,7 @@
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
                 <span class="email-error" for="email"></span>
             </div>
             <div>
@@ -33,7 +33,8 @@
             </div>
             <div>
                 <label for="number">Number</label>
-                <input type="number">
+                <input type="tel" id="mobile" for="mobile"required>
+                <span class="mobile-error" for="mobile"></span>
             </div>
             <div>
                 <label for="tel">Telephone</label>
@@ -74,13 +75,25 @@
         const email = document.querySelector('#email');
         const emailError = document.querySelector('.email-error');
         email.addEventListener('input',function(){
-            let emailRegex = RegExp('^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$'); 
-            if(emailRegex.test(email)){
+            let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+            if(emailRegex.test(email.value)){
                 emailError.textContent = " ";
             }else{
-                emailError.textContent = "Incorrect Email";
+                emailError.textContent = "Invalid Email";
             }
         });
+        //Mobile Number validate
+        const mobile = document.querySelector('#mobile');
+        const mobileError = document.querySelector('.mobile-error');
+        mobile.addEventListener('input',function(){
+            let mobRegex =  /^91[ ]*[6-9]{1}[0-9]{9}$/;
+            if(mobRegex.test(mobile.value)){
+                mobileError.textContent  = " ";
+            }else{
+                mobileError.textContent = "Invalid Mobile";
+            }
+        });
+
 
         
     </script>

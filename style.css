@@ -9,16 +9,14 @@ form {
     margin-top: 20px;
     border: 2px solid tomato;
     padding: 50px;
-    width:600px
+    width: 600px
 }
 
 div {
     margin-bottom: 25px;
     text-align: center;
     display: flex;
-    
 
-    
 }
 
 input,
@@ -52,16 +50,25 @@ button:hover {
 body {
     border: 3px solid tomato;
 }
-.test-error{
-    text-align:right;
-    
+
+.test-error {
+    text-align: right;
+
 }
-span{
+
+span {
     color: red;
     font-style: italic;
     padding: 0 0 0 30px;
 }
-.mainContainer{
+
+.mainContainer {
     display: flex;
     justify-content: center;
+}
+
+output {
+    color:tomato;
+    padding: 0 0 0 20px;
+    font-weight: bold;
 }

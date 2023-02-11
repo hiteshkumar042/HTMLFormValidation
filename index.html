@@ -15,35 +15,35 @@
         <form action="#" target="_blank">
             <div>
                 <label for="text">Name</label>
-                <input type="text" id="text" name="text" required>
+                <input type="text" id="text" name="text" placeholder="Enter Name" required>
                 <span class="text-error" for="text"></span>
             </div>
             <div>
                 <label for="pwd">Password</label>
-                <input type="password" id="pwd">
+                <input type="password" id="pwd" placeholder="Enter Password">
                 <span class="pwd-error"for='pwd'></span>
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" required placeholder="Enter Email Id">
                 <span class="email-error" for="email"></span>
             </div>
             <div>
                 <label for="url">URL Link</label>
-                <input type="url">
+                <input type="url" placeholder="Enter URL Here">
             </div>
             <div>
                 <label for="number">Number</label>
-                <input type="tel" id="mobile" for="mobile"required>
+                <input type="tel" id="mobile" for="mobile" placeholder="Enter Mobile Number" required>
                 <span class="mobile-error" for="mobile"></span>
             </div>
             <div>
                 <label for="tel">Telephone</label>
-                <input type="tel">
+                <input type="tel" placeholder="Enter Telephone Number">
             </div>
             <div>
                 <label for="search">Search</label>
-                <input type="search">
+                <input type="search" placeholder="Search Anything">
             </div>
             <div>
                 <label for="dateTime">Date & Time</label>
@@ -51,7 +51,8 @@
             </div>
             <div>
                 <label for="range">Choose Salary</label>
-                <input type="range" min="15000" max="100000" step="500">
+                <input type="range" id="salary" min="15000" max="100000" step="500">
+                <output class="salary-output"></output>
             </div>
 
             <button>Submit</button>

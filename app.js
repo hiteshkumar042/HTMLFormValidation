@@ -37,11 +37,18 @@ mobile.addEventListener('input', function () {
 const pwd = document.querySelector('#pwd');
 const pwdError = document.querySelector('.pwd-error');
 pwd.addEventListener('input', function () {
-    let PwdRegex = /^[A-Z][a-z][0-9]{8,}$/;
-    if (pwd.value.length > 8) {
+    let pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+    if (pwdRegex.test(pwd.value)) {
         pwdError.textContent = " ";
     } else {
         pwdError.textContent = "Weak Password";
     }
 });
 
+//Salary range
+const salary = document.querySelector('#salary');
+const salaryOut = document.querySelector('.salary-output');
+salaryOut.textContent =salary.value
+salary.addEventListener('input',function(){
+    salaryOut.textContent= salary.value;
+});
